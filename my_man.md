@@ -67,3 +67,20 @@ Exactly 1           | @(abc)                    | (abc)
                     |                           |
 0 or more           | *(abc)                    | (abc)*
 --------------------|---------------------------|------------------
+
+
+Permissions:
+fff
+
+Special Bits: 
+* Set user ID (SUID) - Run as user owner of the file
+--> Has no affect on directoris
+* Set group ID (SGID) - Run as group owner of the file
+--> provides group inheritance
+* Sticky - Remain in swap but not functional in linux on files as linux caches stuff. 
+
+
+## Gathering System Information
+
+
+
