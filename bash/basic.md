@@ -19,9 +19,9 @@ Stream		Name			Content
 
 Symbol		Function
 
-`\>`    	Output redirection
+`>`    	Output redirection
 
-`\>\>`	    Append redirection
+`>>`	    Append redirection
 
 `<` 		Input redirection
 
@@ -30,13 +30,13 @@ Symbol		Function
 
 ## Commands and Built-ins
 
-Many programs used in Bash are commands 
-- Thes do not depend on Bash
+1. Many programs used in Bash are commands 
+    A. These commands do not depend on Bash itself and can be used as a part of the command line interface more generally. 
 
-Bash includes built-in commands which are part of Bash itself
+2. Bash includes built-in commands which are part of Bash itself
 
-Can specify which to use by prefacing with `command echo` or `builtin echo`
+3. Can specify which to use by prefacing with `command echo` or `builtin echo`
 
-command -V will show us if a command is builtin or wrogram
+4. Command -V will show us if a command is a bash builtin or program
 
 
