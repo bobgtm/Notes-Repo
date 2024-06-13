@@ -1,12 +1,11 @@
-# Basics
+#Basics
 
 ## Pipes
  send the output of one process to another as they were connected 
-
 `cat loremipsum.txt | wc -l`
 
 ## Redirections 
-send streams to or from files 
+Send streams to or from files 
 
 `ls > list.txt`
 
@@ -20,13 +19,13 @@ Stream		Name			Content
 
 Symbol		Function
 
-> 		Output redirection
+`\>`    	Output redirection
 
->>		Append redirection
+`\>\>`	    Append redirection
 
-< 		Input redirection
+`<` 		Input redirection
 
-<<		Here Document - usefull for displaying options or long passages
+`<<`    	Here Document - usefull for displaying options or long passages
 
 
 ## Commands and Built-ins
