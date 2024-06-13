@@ -7,25 +7,26 @@ Source - https://docs.github.com/en/authentication/connecting-to-github-with-ssh
 
 3. Start the ssh-agent in the background.
 
-$ eval "$(ssh-agent -s)"
-> Agent pid 59566
+`$ eval "$(ssh-agent -s)"`
+`$ Agent pid 59566`
 
 4. Add your SSH private key to the ssh-agent.
 
 If you created your key with a different name, or if you are adding an existing key that has a different name, replace id_ed25519 in the command with the name of your private key file.
 
-ssh-add ~/.ssh/id_ed25519
+`ssh-add ~/.ssh/id_ed25519`
 
 
+5. Then in GitHub go to settings, SSH Keys: 
 
-Click New SSH key or Add SSH key.
+- Click New SSH key or Add SSH key.
 
-In the "Title" field, add a descriptive label for the new key. For example, if you're using a personal laptop, you might call this key "Personal laptop".
+- In the "Title" field, add a descriptive label for the new key. For example, if you're using a personal laptop, you might call this key "Personal laptop".
 
-Select the type of key, either authentication or signing. For more information about commit signing, see "About commit signature verification."
+- Select the type of key, either authentication or signing. For more information about commit signing, see "About commit signature verification."
 
-In the "Key" field, paste your public key.
+- In the "Key" field, paste your public key.
 
-Click Add SSH key.
+- Click Add SSH key.
 
-If prompted, confirm access to your account on GitHub.
+- If prompted, confirm access to your account on GitHub.
