@@ -1,4 +1,9 @@
-#Master List of Sources to Learn Linux 
+# Master List of Sources to Learn Linux 
+
+
+## System Administration
+* Unix and LInux System Adminstration Handbook, 5th Ed. - Hein, et al. 
+
 
 ## Kernel Stuff
 
@@ -14,6 +19,7 @@
 * [Operating Systems: Three Easy Pieces](https://pages.cs.wisc.edu/~remzi/OSTEP)
 
 
-
 #### Master Lists
-* [Unix Stack Exchange Answer](https://unix.stackexchange.com/questions/1003/linux-kernel-good-beginners-tutorial)
+* [Unix Kernel Stack Exchange Answer](https://unix.stackexchange.com/questions/1003/linux-kernel-good-beginners-tutorial)
+
+
