@@ -14,4 +14,8 @@
 
 * ``*userdel [-l | -r] _username_`` to change password
 * If I wanted to change defaults for users, where would I go? 
-** ``/etc/login.defs``
+** ``/etc/login.defs`` or
+** ``/etc/default/useradd``
+
+* What is the skel directory? 
+** Located in ``/etc/skel`` it contains files that are copied to new User's home directories automatically
