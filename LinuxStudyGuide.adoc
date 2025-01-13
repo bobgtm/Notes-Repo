@@ -1,5 +1,17 @@
 = System Admin Guide
 
-1. .Accounts
-* ``useradd``
-* ``groupadd``
+=== 1. Accounts
+- Create, delete, and modify local user accounts. Manage group accounts. 
+* ``*useradd* _username_`` to add user
+*``*passwd _username_`` to change password
+* ``*groupadd* _group name_`` to add a group
+* ``*usermod* -aG _group name username_`` to add a user to a group
+* ``*chage* -l  _username_``echo bobby I
+* ``*chage* -E $(date -d +&Y-%m-%d) _username_`` for passwd aging
+ note: chage is a frontend to /etc/shadow where account password settings are stored. 
+
+* What is the difference between usermod -L and passwd -l? 
+
+* ``*userdel [-l | -r] _username_`` to change password
+* If I wanted to change defaults for users, where would I go? 
+** ``/etc/login.defs``
