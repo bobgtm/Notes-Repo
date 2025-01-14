@@ -6,7 +6,7 @@
 * ``*passwd* _username_`` to change password
 * ``*groupadd* _group name_`` to add a group
 * ``*usermod* -aG _group name username_`` to add a user to a group. Usermod used to change a user's account settings after the account has been created. 
-* ``gpasswd -a _username_ _groupname_`` to add user to a group
+* ``*gpasswd* -a _username_ _groupname_`` to add user to a group
 * ``*chage* -l  _username_``
 * ``*chage* -E $(date -d +&Y-%m-%d) _username_`` for passwd aging
  note: chage is a frontend to /etc/shadow where account password settings are stored. 
