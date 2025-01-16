@@ -34,7 +34,7 @@ jobs:
         # Optional (recommended) mail server password:
           password: ${{secrets.MAIL_PASSWORD}}
         # Required mail subject:
-          subject: Github Actions job result
+          subject: BG updated ${{ github.repository }}
         # Required recipients' addresses:
           to: robertgriffintm@gmail.com
         # Required sender full name (address can be skipped):
