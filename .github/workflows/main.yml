@@ -1,0 +1,73 @@
+
+name: Email Workflow
+on:
+  push: 
+    branches: [ main ]
+
+jobs:
+  send-mail:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  
+      - name: Get commit details
+        id: commit-details
+        run: |
+          echo "diff=$(git diff-tree --no-commit-id --name-status -r ${{ github.sha }})" >> $GITHUB_OUTPUT
+          echo "message<<EOF" >> $GITHUB_OUTPUT
+          echo "${{ github.event.head_commit.message }}" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: Send Mail
+        uses: dawidd6/action-send-mail@v4
+        with:
+          server_address: smtp.gmail.com
+        # Server port, default 25:
+          server_port: 465
+        # Optional whether this connection use TLS (default is true if server_port is 465)
+          secure: true
+        # Optional (recommended) mail server username:
+          username: ${{secrets.MAIL_USERNAME}}
+        # Optional (recommended) mail server password:
+          password: ${{secrets.MAIL_PASSWORD}}
+        # Required mail subject:
+          subject: Github Actions job result
+        # Required recipients' addresses:
+          to: robertgriffintm@gmail.com
+        # Required sender full name (address can be skipped):
+          from: bob.griff.29@gmail.com # <user@example.com>
+        # Optional plain body:
+          body: |
+            Repository: ${{ github.repository }}
+            
+            Commit Message:
+            ${{ github.event.head_commit.message }}
+
+            Files Changed:
+            ${{ join(github.event.commits.*.modified, '\n') }}
+            
+            Added Files:
+            ${{ join(github.event.commits.*.added, '\n') }}
+            
+            Removed Files:
+            ${{ join(github.event.commits.*.removed, '\n') }}
+            
+            Changes Made:
+            ${{ steps.commit-details.outputs.diff }}
+            
+            Full Diff:
+            ```
+            ${{ steps.commit-details.outputs.message }}
+            ```
+        # Optional unsigned/invalid certificates allowance:
+          ignore_cert: true
+        # Optional converting Markdown to HTML (set content_type to text/html too):
+        #  convert_markdown: true
+        # Optional attachments:
+         # attachments: attachments.zip,git.diff,./dist/static/*.js
+        # Optional priority: 'high', 'normal' (default) or 'low'
+          priority: low
+      
