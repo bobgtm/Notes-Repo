@@ -12,15 +12,26 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  
+          fetch-depth: 0  #
+          
       - name: Get commit details
         id: commit-details
         run: |
-          echo "diff=$(git diff-tree --no-commit-id --name-status -r ${{ github.sha }})" >> $GITHUB_OUTPUT
-          echo "message<<EOF" >> $GITHUB_OUTPUT
-          echo "${{ github.event.head_commit.message }}" >> $GITHUB_OUTPUT
-          echo "EOF" >> $GITHUB_OUTPUT
+            echo "diff<<EOF" >> $GITHUB_OUTPUT
+            git diff --unified=3 ${{ github.sha }}~1..${{ github.sha }}
+            echo "EOF" >> $GITHUB_OUTPUT
+            echo "message<<EOF" >> $GITHUB_OUTPUT
+            echo "${{ github.event.head_commit.message }}" >> $GITHUB_OUTPUT
+            echo "EOF" >> $GITHUB_OUTPUT
 
+          
+      - name: Extract File Changes
+        id: file-changes
+        run: |
+          echo "modified_files=$(git diff-tree --no-commit-id --name-only -r ${{ github.sha }} --diff-filter=M | tr '\n' ',')" >> $GITHUB_OUTPUT
+          echo "added_files=$(git diff-tree --no-commit-id --name-only -r ${{ github.sha }} --diff-filter=A | tr '\n' ',')" >> $GITHUB_OUTPUT
+          echo "removed_files=$(git diff-tree --no-commit-id --name-only -r ${{ github.sha }} --diff-filter=D | tr '\n' ',')" >> $GITHUB_OUTPUT
+          
       - name: Send Mail
         uses: dawidd6/action-send-mail@v4
         with:
@@ -34,34 +45,33 @@ jobs:
         # Optional (recommended) mail server password:
           password: ${{secrets.MAIL_PASSWORD}}
         # Required mail subject:
-          subject: BG updated ${{ github.repository }}
+          subject: Github Actions job result
         # Required recipients' addresses:
           to: robertgriffintm@gmail.com
         # Required sender full name (address can be skipped):
-          from: bob.griff.29@gmail.com # <user@example.com>
+          from: Bobby Griffin <bob.griff.29@gmail.com> # <user@example.com>
         # Optional plain body:
           body: |
             Repository: ${{ github.repository }}
             
             Commit Message:
             ${{ github.event.head_commit.message }}
-
-            Files Changed:
-            ${{ join(github.event.commits.*.modified, '\n') }}
+                     
+            Modified Files:
+            ${{ steps.file-changes.outputs.modified_files }}
             
             Added Files:
-            ${{ join(github.event.commits.*.added, '\n') }}
+            ${{ steps.file-changes.outputs.added_files }}
             
             Removed Files:
-            ${{ join(github.event.commits.*.removed, '\n') }}
-            
-            Changes Made:
-            ${{ steps.commit-details.outputs.diff }}
+            ${{ steps.file-changes.outputs.removed_files }}
             
             Full Diff:
             ```
             ${{ steps.commit-details.outputs.message }}
             ```
+            Committed by: ${{ github.event.pusher.name }}
+            
         # Optional unsigned/invalid certificates allowance:
           ignore_cert: true
         # Optional converting Markdown to HTML (set content_type to text/html too):
