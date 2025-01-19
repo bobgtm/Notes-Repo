@@ -1,5 +1,3 @@
 # Notes Repo
 
-Collection of notes I've made on various topics I'm learning or need to reference. Notes may appear untidy in which case they were likely jotted down quickly.  
-
-As of 2024-06-07, no quick way to search these. I intend to build a command line tool to traverse these quickly to find what I am looking for. 
+I'm very much interested in the interstections between coding, system admin/engineering, and networking. I' _mostly_ new to tech but the set of responsibilities I dream to be involved in have something to do with those three broad areas. Here you'll find a collection of notes I've made on various topics which support main aim in growing my proficiency with the above. 
