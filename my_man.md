@@ -11,16 +11,23 @@ sudo chattr +i aclfile.txt - set immutable attr on file
 lsattr file - get att on file
 
 * Globbing - expanding a nonspecific file name containing wildcard characters in specific filenames 
-``` ls file* ```
+``` ls file* 
+```
 returns 
 
-``` file ```
-``` file.txt ```
-``` file.jpg ```
-``` file.png ```
+``` file 
+```
+``` file.txt 
+```
+``` file.jpg 
+```
+``` file.png 
+```
 
 
-``` ls file?.txt ```
+
+``` ls file?.txt 
+```
 * - Matches any character
 ? - Matches one of any character
 
