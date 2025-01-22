@@ -1,8 +1,9 @@
-Compare and contrast networking appliances, applications,
+= Compare and contrast networking appliances, applications,
 and functions.
 • Physical and virtual appliances
 - Router
-- Switch
+- *Switch* 
+
 - Firewall
 - Intrusion detection system
 (IDS)/intrusion prevention
