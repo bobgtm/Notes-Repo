@@ -18,7 +18,10 @@
 
 === *Switch*
 * *Function:* Allows two or more devices to connect and send data packets back and forth
-** Layer 2 Switch: Uses the physical Address (MAC) to locate other devices. When first connected to the switch, devices send their MAC adresses to the switch
+Layer 2 Switch:: Uses the physical Address (MAC) to locate other devices. When first connected to the switch, devices send their MAC adresses to the switch
+Layer 3 Switch:: Uses IP addresses to forward Packets, faster and has a higher port density to switch and route data
+Layer 3 Address Resolution Protocal (ARP):: Hardware based arp which takes the IP address (the logical address) and convert it to a physical address (MAC)
+
 
 
 === *Firewall*
@@ -28,7 +31,9 @@
 * *Function:* 
 
 === *Load balancer*
-* *Function:* 
+* *Function:* distributes the Network load by directing massive flows of network traffic or requests among multiple servers or machines. 
+** This provides higher availablitly and reliablity if one server were to fail. All traffic can be redirected from the failed server to the one that is still operating. 
+** Allows scalability as servers can be provisioned or deprovisioned in the background
 
 === *Proxy*
 * *Function:* 
