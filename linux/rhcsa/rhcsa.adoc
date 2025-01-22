@@ -20,3 +20,15 @@
 
 * What is the skel directory? 
 ** Located in ``/etc/skel`` it contains files that are copied to new User's home directories automatically
+
+=== 2. File Permissions
+- List, set, and change standard ugo/rwx permissions
+* `` ls -l `` to list the file permissions
+
+- Manage default file permissions
+* broken up into three sets of permissions (User, Group, All/World/Other)
+** R- Read
+** W- Write
+** X- Execute
+
+
