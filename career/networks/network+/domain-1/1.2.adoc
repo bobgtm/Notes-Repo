@@ -1,23 +1,67 @@
-= Compare and contrast networking appliances, applications,
-and functions.
-• Physical and virtual appliances
-- Router
-- *Switch* 
+= Compare and contrast networking appliances, applications, and functions.
+* Physical and virtual appliances
 
-- Firewall
-- Intrusion detection system
-(IDS)/intrusion prevention
-system (IPS)
-- Load balancer
-- Proxy
-- Network-attached storage (NAS)
-- Storage area network (SAN)
-- Wireless
-o Access point (AP)
-o Controller
-• Applications
-- Content delivery network (CDN)
-• Functions
-- Virtual private network (VPN)
-- Quality of service (QoS)
-- Time to live (TTL)
+=== *Router*
+* *Function:* Connects two or more packet-switched networks
+* Routers examine incoming IP address and its network portion of the addres. It will guide the packet to its destination.
+** If destination is not on the same network as the router, the router will find the best route for that data
+** If destination is on the same network as the router, it will use the host portion of the IP to send data to the correct device on the network
+* Use routing tables to keep track of the locations of devices on the network
+* *Benefits*
+* *Types*
+** Core Routers
+** Edge Routers
+** Distribution Routers
+** Wireless Routers
+** Virtual Routers
+
+
+=== *Switch*
+* *Function:* Allows two or more devices to connect and send data packets back and forth
+** Layer 2 Switch: Uses the physical Address (MAC) to locate other devices. When first connected to the switch, devices send their MAC adresses to the switch
+
+
+=== *Firewall*
+* *Function:* 
+
+=== *Intrusion detection system (IDS) / Intrusion prevention system (IPS)*
+* *Function:* 
+
+=== *Load balancer*
+* *Function:* 
+
+=== *Proxy*
+* *Function:* 
+
+=== *Network-attached storage (NAS)*
+* *Function:* 
+
+=== *Storage area network (SAN)*
+* *Function:* 
+
+=== *Wireless*
+* *Function:* 
+
+=== *Access point (AP)*
+* *Function:* 
+
+=== *Controllers*
+* *Function:* 
+
+=== *Applications*
+* *Function:* 
+
+=== *Content delivery network (CDN)*
+* *Function:* 
+
+=== *Functions*
+* *Function:* 
+
+=== *Virtual private network (VPN)*
+* *Function:* 
+
+=== *Quality of service (QoS)*
+* *Function:* 
+
+=== *Time to live (TTL)*
+* *Function:* 
