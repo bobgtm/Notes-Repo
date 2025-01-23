@@ -47,7 +47,7 @@ jobs:
         # Required mail subject:
           subject: Github Actions job result
         # Required recipients' addresses:
-          to: robertgriffintm@gmail.com
+          to: griffin.jamiea@gmail.com
         # Required sender full name (address can be skipped):
           from: Bobby Griffin <bob.griff.29@gmail.com> # <user@example.com>
         # Optional plain body:
