@@ -1,24 +1,52 @@
-Summarize cloud concepts and connectivity options.
-• Network functions virtualization
-(NFV)
-• Virtual private cloud (VPC)
-• Network security groups
-• Network security lists
-• Cloud gateways
-- Internet gateway
-- Network address translation
-(NAT) gateway
-• Cloud connectivity options
-- VPN
-- Direct Connect
-• Deployment models
-- Public
-- Private
-- Hybrid
-• Service models
-- Software as a service (SaaS)
-- Infrastructure as a service (IaaS)
-- Platform as a service (PaaS)
-• Scalability
-• Elasticity
-• Multitenancy
+= Summarize cloud concepts and connectivity options.
+
+Network functions virtualization (NFV):: Concept where network functions traditionally performed by dedicated hardware applicances are virtualized and subsequently deployed as software-based instances, typically in the cloud
+
+
+
+Virtual private cloud (VPC):: A logically isolated section of a public cloud infrastructure where users can launch resources like virtual machines, databases, and storage instances within their own private network space
+* Provides enhanced privacy, security, and control over the public cloud environment but doesn't specifically involve virtualization of appliances
+* Virtualizes all cloud components
+    ** subnets, gateways, endpoints, databases, VMs
+* Purpose is to provide security, not improved management and scalability
+
+
+Network security groups:: Act as virtual firewalls to control inbound and outbound traffic to VMs within a cloud network
+* allow users to define rules to filter network traffic based on prototocal, source/destination IP address, and port numbers
+* Do not emulate load balancers, routers, or other hardware appliances
+
+Network security lists:: Define rules to control traffic flow to and from Specific IP address or subnets but do not pertain to the virtualization of network functions
+
+
+
+== Cloud gateways
+
+Internet gateway:: Used to provide access from a private netowrk to the internet. Acts as a bridge  between an organizations internal network and the internet
+* Allows user to access cloud-based services and resources
+* Provides access to the internal private network
+* Scalable and easy to use and configure
+** Can be placed b/w a VPC and the Internet
+** or a traditional on prem network and the internet
+
+Network address translation (NAT) gateway:: Used to translate private IP addresses to public IP addresses for outbound internet traffic. 
+* Does not provide an inbound connection to the internal network, only outbound
+* Coneals internap IP addresses from public connections
+* Can give private internal subnets external access
+
+
+
+
+Cloud connectivity options
+VPN
+Direct Connect
+Deployment models
+Public
+Private
+Hybrid
+Service models
+Software as a service (SaaS)
+Infrastructure as a service (IaaS)
+Platform as a service (PaaS)
+Scalability
+Elasticity
+Multitenancy
