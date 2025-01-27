@@ -1,0 +1,189 @@
+= Explain common networking ports, protocols, services, and traffic types.
+
+== Protocols Ports
+
+File Transfer Protocol (FTP) 20/21:: Meant for transferring files
+* Implented as a standard client server
+* Works over TCP/IP Connections
+* Can support anonymous connections
+* Uses two separate channels 
+** Command Channel & The Data Channel (Active: Port 20 | Passive: Any available port#)
+* Modes: Active and Passive
+* Establishin a connection
+** Command line, Web Browser, and FTP Clients
+* FTP is not secure
+
+Secure File Transfer Protocol (SFTP) 22:: 
+SFTP runs over SSH and is designed for advanced web security
+* Invoke FTP commands over port 22
+
+
+Secure Shell (SSH) 22:: 
+Used to provide secure access for user activity, remote commands, Network Infra management, over an encrypted connection. 
+* Establish Conn: 
+** Command Line
+** SSH Client (Putty, etc)
+
+.Common SSH Commands
+[cols="1,1"]
+|===
+|ssh
+|ssh-copy-id
+
+|ssh server.example.org
+|ssh-agent
+
+|ssh remote_host_userID@server.exmple.org
+|ssh-add
+
+|sshd
+|sftp
+
+|ssh-keygen
+|
+|=== 
+
+Support the use of Symmetrical Keys meaning there are identical keys on each system
+
+Asymmetrical: Private and Public keys 
+
+Hashing: Mathematical algorithm that can be applied to any 
+
+* SSH Security Considerations: 
+** Improper File Control is avoided
+** Exposed credentials in a script or piece of code
+** Key Management 
+
+//-
+
+Telnet 23:: 
+Earliest remote login protocol providing Terminal Session to Remote Host. Uses TCP port 23. 
+* Used to manage devices or apps without GUI, easily accessible
+* Means by which commands entered on local, dumb terminal would be passed to the mainframe computer.
+* Used most frequently now for devices with no keyboard or monitor (routers)
+
+.Essential Telnet Commands
+[cols="1,1"]
+|===
+|telnet hostname
+|telnet ip-address:port #
+|=== 
+
+* Advantages
+** Versatile
+** Cross-platform
+** Variety of targets
+
+* Disadvantages
+** Unencrypted data exchange
+** Security Vulnerabilities
+
+//-
+
+Simple Mail Transfer Protocol (SMTP) 25::
+Standard Protocol for sending emails and simplifying communication between email servers.
+* When we hit "send", hits email server and then is forwarded to the external mail server. 
+* SMTP is for sending an email only. 
+* Mail servers in the enterprise use SMTP to send within the network only. 
+* Ports 465 / 587 used for secured ports, esp 587
+
+* Advantages
+** Simplicity: availablity by default and requires little configuration
+** Reliablitly
+** Ensures delivery
+** Multiple outgoing server support
+
+* Disadvantages: 
+** Not secure
+** Limitations and restrictions on what can be sent out
+
+* Uses handshake where each server agrees on parameters for communication
+* Message transfer using multiple commands for sender/recipient, body, attachments, etc... 
+* Closes connection
+
+//-
+
+Domain Name System (DNS) 53::
+Translates domain names into IP addresses; eliminates need to memorize IP addresses to access a web domain
+
+* DNS Servers: 
+** Recursor - System which satisifies the domain request and provides an IP address
+*** Examines name that is given and will break down sections of Domain Name (the name spaces) which gives the correct pathway
+*** Root nameserver - preconfiged servers where searches by Recursor can begin
+*** TLD nameserver - first portion of hierarchy which narrows down namespace
+*** Authoritative nameserver - Contains publicly registered names of other DNS servers help by domain holders. 
+
+
+
+Dynamic Host Configuration Protocol (DHCP) 67/68::
+Automatically assignes IP address, subnet makse, default gateway, and a DNS server address for efficient communication b/w network endpoints
+
+* Simplifies network IP address management
+
+* Advantages: 
+** Accurate IP Configuration chosen from a pool of valid IP pools
+** Fewer IP conflicts 
+** Any number of client devices
+** Effective management of change 
+
+* Disadvantages
+** Unauthorized servers might appear on the network 
+** Unauthroized clients
+** IP address depletion if # of addresses are not available for # of clients
+
+* Components of DHCP
+** DHCP server (usually standalone but might also be included in a router)
+** DHCP Client (any device which recieves an IP from server)
+** IP address pool
+** Subnet
+** Lease - validity period of the value recieved. Can be configured. 
+** DHCP Relay
+
+* Allocating IP Address with DHCP: 
+** DHCP discover - every system on network will hear packet broadcast from client requesting an IP address
+** DHCP offers - Sent in response to DHCP requests
+
+Trivial File Transfer Protocol (TFTP) 69::
+
+Hypertext Transfer Protocol (HTTP) 80::
+
+Network Time Protocol (NTP) 123::
+
+Simple Network Management Protocol (SNMP) 161/162::
+
+Lightweight Directory Access Protocol (LDAP) 389::
+
+Hypertext Transfer Protocol Secure (HTTPS) 443::
+
+Server Message Block (SMB) 445::
+
+Syslog 514::
+
+Simple Mail Transfer Protocol Secure (SMTPS) 587::
+
+Lightweight Directory Access Protocol over SSL (LDAPS) 636::
+
+
+• Internet Protocol (IP) types
+- Internet Control Message
+Protocol (ICMP)
+- Transmission Control Protocol
+(TCP)
+- User Datagram Protocol (UDP)
+- Generic Routing Encapsulation
+(GRE)
+- Internet Protocol Security
+(IPSec)
+o Authentication Header (AH)
+o Encapsulating Security
+Payload (ESP)
+o Internet Key Exchange (IKE)
+• Traffic types
+- Unicast
+- Multicast
+- Anycast
+- Broadcast
+Structured Query Language (SQL) Server 1433
+Remote Desktop Protocol (RDP) 3389
+Session Initiation Protocol (SIP) 5060/5061
+
