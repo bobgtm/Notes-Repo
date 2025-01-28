@@ -2,7 +2,7 @@
 
 == Protocols Ports
 
-File Transfer Protocol (FTP) 20/21:: Meant for transferring files
+File Transfer Protocol (FTP) 20/21:: Both a protocol and a program used for transferring files across an IP network 
 * Implented as a standard client server
 * Works over TCP/IP Connections
 * Can support anonymous connections
@@ -14,13 +14,15 @@ File Transfer Protocol (FTP) 20/21:: Meant for transferring files
 * FTP is not secure
 
 Secure File Transfer Protocol (SFTP) 22:: 
-SFTP runs over SSH and is designed for advanced web security
+SFTP runs over SSH and is designed for transferring files over an encrypted
+connection. 
+* Uses an ssh session
 * Invoke FTP commands over port 22
 
 
 Secure Shell (SSH) 22:: 
 Used to provide secure access for user activity, remote commands, Network Infra management, over an encrypted connection. 
-* Establish Conn: 
+* Establish Connection: 
 ** Command Line
 ** SSH Client (Putty, etc)
 
@@ -84,6 +86,7 @@ Simple Mail Transfer Protocol (SMTP) 25::
 Standard Protocol for sending emails and simplifying communication between email servers.
 * When we hit "send", hits email server and then is forwarded to the external mail server. 
 * SMTP is for sending an email only. 
+* Once sent, mesage is spooled to a device while server checks queue for messages 
 * Mail servers in the enterprise use SMTP to send within the network only. 
 * Ports 465 / 587 used for secured ports, esp 587
 
