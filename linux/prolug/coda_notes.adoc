@@ -1,0 +1,13 @@
+= Testing The Title here
+
+* Version of Linux
+``cat /etc/*release``
+
+* Check the kernel version
+``uname -r``
+
+* Duration the system has been up
+``uptime``
+
+* How the system booted, kernel params passed when system started
+``cat /proc/cmdline``
