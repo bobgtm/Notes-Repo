@@ -210,19 +210,79 @@ Protocol for resource fetching via messages rather than data streams over TCP or
 
 //-
 
+Hypertext Transfer Protocol Secure (HTTPS) 443::
+Runs over Secure Socket Layer Protocol or Transport Layer Security Protocol
+
+* Value of HTTPS: 
+** Provides encryption for traffic passed over the network. 
+** Keys: 
+*** Private Key and Public Key (Public Key INfrastructure.)
+
+//-
+
 Network Time Protocol (NTP) 123::
+Syncs computer clock in a network which is both fault tolerant and scalable
+
+* Not concerned with establishing a session and just broadcasts information
+* Network acceleration and management systems rely on time stamps
+
+* Usually set up a server in one environment to synchronize with precise clocks from other environments
+
+* Process: 
+** Time-request exchange initiated by client requesting the correct time from the server
+** Request latency delay calculated, time is then adjusted and time is matched
+** Client updates clocks in intervals
 
 //-
 
 Simple Network Management Protocol (SNMP) 161/162::
+Enables various devices on a network to share information across the network. Facilitates communications between different hardware and software, identifies connected devices 
+
+* Limitations
+** Restricted to SNMP-compatible devices and must be enabled
+
+* Components: 
+** SNMP manager (Port 161) -> system responsible for managing the overall environment
+** SNMP agent (Port 162) -> responsible for gathering all info on a client so that it might be able to responsd to the manager
+
+* SNMP Traps: 
+** Polled traps
+** Autonomous Traps
+
+//-
 
 Lightweight Directory Access Protocol (LDAP) 389::
+Used to store and exchange directory information for user accounts. 
 
-Hypertext Transfer Protocol Secure (HTTPS) 443::
+* Can use LDAP to pull user information to create new directories for account information
+** Unique Entries
+** Multiple independent directories
+** Extensible and scalable
+
+//-
 
 Server Message Block (SMB) 445::
+Used to provide shared access to resources (files, directories, printers, routers) for any user on the network
+
+* More likely to place resources on server but not required as it can be used on any system 
+** Samba
+** FreeNAS
+** ConnectedNAS
+
+//-
 
 Syslog 514::
+Sends data about status, events, and diagnostics to a centralized collection point for thorough analysis and monitoring of systems, servers, clients, etc
+
+* Three Layers: 
+** Content
+** Application
+** Transport
+
+* Syslog Server: 
+** Deploys a listener to listen for events on the system which can the be delivered to a database
+
+// - 
 
 Simple Mail Transfer Protocol Secure (SMTPS) 587::
 
