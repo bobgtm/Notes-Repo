@@ -2,7 +2,7 @@
 
 == Protocols Ports
 
-File Transfer Protocol (FTP) 20/21:: Meant for transferring files
+File Transfer Protocol (FTP) 20/21:: Both a protocol and a program used for transferring files across an IP network 
 * Implented as a standard client server
 * Works over TCP/IP Connections
 * Can support anonymous connections
@@ -14,13 +14,15 @@ File Transfer Protocol (FTP) 20/21:: Meant for transferring files
 * FTP is not secure
 
 Secure File Transfer Protocol (SFTP) 22:: 
-SFTP runs over SSH and is designed for advanced web security
+SFTP runs over SSH and is designed for transferring files over an encrypted
+connection. 
+* Uses an ssh session
 * Invoke FTP commands over port 22
 
 
 Secure Shell (SSH) 22:: 
 Used to provide secure access for user activity, remote commands, Network Infra management, over an encrypted connection. 
-* Establish Conn: 
+* Establish Connection: 
 ** Command Line
 ** SSH Client (Putty, etc)
 
@@ -84,6 +86,7 @@ Simple Mail Transfer Protocol (SMTP) 25::
 Standard Protocol for sending emails and simplifying communication between email servers.
 * When we hit "send", hits email server and then is forwarded to the external mail server. 
 * SMTP is for sending an email only. 
+* Once sent, mesage is spooled to a device while server checks queue for messages 
 * Mail servers in the enterprise use SMTP to send within the network only. 
 * Ports 465 / 587 used for secured ports, esp 587
 
@@ -113,7 +116,7 @@ Translates domain names into IP addresses; eliminates need to memorize IP addres
 *** TLD nameserver - first portion of hierarchy which narrows down namespace
 *** Authoritative nameserver - Contains publicly registered names of other DNS servers help by domain holders. 
 
-
+//-
 
 Dynamic Host Configuration Protocol (DHCP) 67/68::
 Automatically assignes IP address, subnet makse, default gateway, and a DNS server address for efficient communication b/w network endpoints
@@ -134,30 +137,152 @@ Automatically assignes IP address, subnet makse, default gateway, and a DNS serv
 * Components of DHCP
 ** DHCP server (usually standalone but might also be included in a router)
 ** DHCP Client (any device which recieves an IP from server)
-** IP address pool
-** Subnet
-** Lease - validity period of the value recieved. Can be configured. 
-** DHCP Relay
+** IP address pool - range of addresses the server will issue
+** Subnet - defines the network boundaries for any given client
+** Lease - validity period of the configuration value recieved. Can be customized
+through different configurations. 
+*** As client ends its lease, it will reach back out to the server to request an
+extension 
+** DHCP Relay - 
 
 * Allocating IP Address with DHCP: 
-** DHCP discover - every system on network will hear packet broadcast from client requesting an IP address
-** DHCP offers - Sent in response to DHCP requests
+** 1. DHCP discover - every system on network will hear packet broadcast from client requesting an IP address
+** DHCP offers - Sent by DHCP server in response to DHCP requests also sent in
+broadcast
+** DHCP Request - Client selects request from all DHCP offers sent from one or more
+DHCP servers
+** DHCP ACK - Server acknowledges that client has accepted DHCP offer
 
-Trivial File Transfer Protocol (TFTP) 69::
+//-
+
+Trivial File Transfer Protocol (TFTP) 69:: 
+Uses UDP instead of TCP and is less reliable but much faster
+
+* Booting network devices
+* Uses PXIE boot
+* Device firmware upgrades
+* Sends much smaller blocks of data and no authentication is required
+
+* How it works: 
+** Read Request or Write Request is sent
+** ACK or DATA packet responce 
+
+* Security Considerations: 
+** No Encryption
+** No Server authentication
+** Access to content should be limited
+
+//-
 
 Hypertext Transfer Protocol (HTTP) 80::
+Protocol for resource fetching via messages rather than data streams over TCP or TLS
 
-Network Time Protocol (NTP) 123::
+* Considerations: 
+** Exstensible - uses would grow and evolve
+** Simple
+** Connections
+** Stateless - any given server doesn't need to retain information about a client
 
-Simple Network Management Protocol (SNMP) 161/162::
+* Uses: 
+** Supports caching information 
+** Relaxes origin constraints
+** Authentication
+** Proxy and tunneling
+** Can retain connections by using cookies
 
-Lightweight Directory Access Protocol (LDAP) 389::
+* Process: 
+** Open TCP Connection and client sends HTTP Message
+** Client reads the response and then the connection is closed
+
+* Requests: 
+** Comes from the client using and HTTP Method such as get, post, etc
+** Path\URL of the resource being requested
+** HTTP protocol version is included
+** Headers can be used but are optional
+** Body - actual content of the response to be posted 
+
+* Response: 
+** HTTP protocol version
+** Status Code
+** Status Message
+** Headers 
+** Body
+
+//-
 
 Hypertext Transfer Protocol Secure (HTTPS) 443::
+Runs over Secure Socket Layer Protocol or Transport Layer Security Protocol
+
+* Value of HTTPS: 
+** Provides encryption for traffic passed over the network. 
+** Keys: 
+*** Private Key and Public Key (Public Key INfrastructure.)
+
+//-
+
+Network Time Protocol (NTP) 123::
+Syncs computer clock in a network which is both fault tolerant and scalable
+
+* Not concerned with establishing a session and just broadcasts information
+* Network acceleration and management systems rely on time stamps
+
+* Usually set up a server in one environment to synchronize with precise clocks from other environments
+
+* Process: 
+** Time-request exchange initiated by client requesting the correct time from the server
+** Request latency delay calculated, time is then adjusted and time is matched
+** Client updates clocks in intervals
+
+//-
+
+Simple Network Management Protocol (SNMP) 161/162::
+Enables various devices on a network to share information across the network. Facilitates communications between different hardware and software, identifies connected devices 
+
+* Limitations
+** Restricted to SNMP-compatible devices and must be enabled
+
+* Components: 
+** SNMP manager (Port 161) -> system responsible for managing the overall environment
+** SNMP agent (Port 162) -> responsible for gathering all info on a client so that it might be able to responsd to the manager
+
+* SNMP Traps: 
+** Polled traps
+** Autonomous Traps
+
+//-
+
+Lightweight Directory Access Protocol (LDAP) 389::
+Used to store and exchange directory information for user accounts. 
+
+* Can use LDAP to pull user information to create new directories for account information
+** Unique Entries
+** Multiple independent directories
+** Extensible and scalable
+
+//-
 
 Server Message Block (SMB) 445::
+Used to provide shared access to resources (files, directories, printers, routers) for any user on the network
+
+* More likely to place resources on server but not required as it can be used on any system 
+** Samba
+** FreeNAS
+** ConnectedNAS
+
+//-
 
 Syslog 514::
+Sends data about status, events, and diagnostics to a centralized collection point for thorough analysis and monitoring of systems, servers, clients, etc
+
+* Three Layers: 
+** Content
+** Application
+** Transport
+
+* Syslog Server: 
+** Deploys a listener to listen for events on the system which can the be delivered to a database
+
+// - 
 
 Simple Mail Transfer Protocol Secure (SMTPS) 587::
 
