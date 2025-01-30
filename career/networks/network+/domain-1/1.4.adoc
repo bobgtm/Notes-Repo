@@ -116,7 +116,7 @@ Translates domain names into IP addresses; eliminates need to memorize IP addres
 *** TLD nameserver - first portion of hierarchy which narrows down namespace
 *** Authoritative nameserver - Contains publicly registered names of other DNS servers help by domain holders. 
 
-
+//-
 
 Dynamic Host Configuration Protocol (DHCP) 67/68::
 Automatically assignes IP address, subnet makse, default gateway, and a DNS server address for efficient communication b/w network endpoints
@@ -137,20 +137,82 @@ Automatically assignes IP address, subnet makse, default gateway, and a DNS serv
 * Components of DHCP
 ** DHCP server (usually standalone but might also be included in a router)
 ** DHCP Client (any device which recieves an IP from server)
-** IP address pool
-** Subnet
-** Lease - validity period of the value recieved. Can be configured. 
-** DHCP Relay
+** IP address pool - range of addresses the server will issue
+** Subnet - defines the network boundaries for any given client
+** Lease - validity period of the configuration value recieved. Can be customized
+through different configurations. 
+*** As client ends its lease, it will reach back out to the server to request an
+extension 
+** DHCP Relay - 
 
 * Allocating IP Address with DHCP: 
-** DHCP discover - every system on network will hear packet broadcast from client requesting an IP address
-** DHCP offers - Sent in response to DHCP requests
+** 1. DHCP discover - every system on network will hear packet broadcast from client requesting an IP address
+** DHCP offers - Sent by DHCP server in response to DHCP requests also sent in
+broadcast
+** DHCP Request - Client selects request from all DHCP offers sent from one or more
+DHCP servers
+** DHCP ACK - Server acknowledges that client has accepted DHCP offer
 
-Trivial File Transfer Protocol (TFTP) 69::
+//-
+
+Trivial File Transfer Protocol (TFTP) 69:: 
+Uses UDP instead of TCP and is less reliable but much faster
+
+* Booting network devices
+* Uses PXIE boot
+* Device firmware upgrades
+* Sends much smaller blocks of data and no authentication is required
+
+* How it works: 
+** Read Request or Write Request is sent
+** ACK or DATA packet responce 
+
+* Security Considerations: 
+** No Encryption
+** No Server authentication
+** Access to content should be limited
+
+//-
 
 Hypertext Transfer Protocol (HTTP) 80::
+Protocol for resource fetching via messages rather than data streams over TCP or TLS
+
+* Considerations: 
+** Exstensible - uses would grow and evolve
+** Simple
+** Connections
+** Stateless - any given server doesn't need to retain information about a client
+
+* Uses: 
+** Supports caching information 
+** Relaxes origin constraints
+** Authentication
+** Proxy and tunneling
+** Can retain connections by using cookies
+
+* Process: 
+** Open TCP Connection and client sends HTTP Message
+** Client reads the response and then the connection is closed
+
+* Requests: 
+** Comes from the client using and HTTP Method such as get, post, etc
+** Path\URL of the resource being requested
+** HTTP protocol version is included
+** Headers can be used but are optional
+** Body - actual content of the response to be posted 
+
+* Response: 
+** HTTP protocol version
+** Status Code
+** Status Message
+** Headers 
+** Body
+
+//-
 
 Network Time Protocol (NTP) 123::
+
+//-
 
 Simple Network Management Protocol (SNMP) 161/162::
 
