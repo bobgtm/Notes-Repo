@@ -11,3 +11,15 @@
 
 * How the system booted, kernel params passed when system started
 ``cat /proc/cmdline``
+
+* Speed in Megahertz (MHZ)
+``dmidecode | grep -i mh``
+
+* What is the manufacturer of the cpu? 
+``lscpu``
+
+* Chip Architecture
+``lscpu``
+
+* Can you tell if system is physical or virtual
+``systemd-detect-virt`` or ``dmidecode | grep -i prod``
