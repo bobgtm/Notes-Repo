@@ -1,10 +1,64 @@
 # 1.6 Compare and contrast Network topologies, architectures, and types
 
 ## Key Terms
-* Mesh -
-* Hybrid -
-* Star/hub and spoke -
-* Point to Point -
+Mesh::
+Every link is a point to point connection wherein every network computer connects to
+every other network computer (or switch to switch)
+* Every node is connected to every other node
+* If one node, data can travel over an alternate path
+** Types: 
+*** Partial:: 
+Many nodes are connected by several nodes might be separated
+
+* Advantages
+** Network can be easily scaled without interrupting connectivity
+** Dedicated Links
+** Traffic is re-routable and simplifies fault identification
+** Central node reduces risk of failure
+
+* Disadvantages
+** Excessive cabling makes it expensive
+** Larger physical footprint as cables need to be run f
+** Complex to implement
+
+
+Hybrid::
+Combines two or more topologies
+
+* Advantages
+** Scalability
+** Flexibility
+** Simplifies troubleshooting
+
+* Disadvantages
+** Can be complex 
+** Can be expensive - Will need to buy more expensive devices with higher port
+density/forwarding rates
+
+Star/hub and spoke::
+All systems connect using a hub with a central node such as a switch
+
+* Advantages
+** Only failed nodes are affected
+** Systems are pretty fast. 
+** Easy to modify
+** Troubleshooting is simple - each node w/ own connection allows for easier
+identification
+
+* Disadvantages
+** Hub or concentrator failure disables nodes
+** Can be slow
+
+Spine-Leaf Architecture::
+
+More switches and cabling
+Scaling out instead of scaling up
+* Better performance, lower latency, greater capacity, improved scalability
+
+
+Point to Point::
+
+
 * Three-tier hierarchical model - 
 * Network - group or system of interconnected computers that can share resources such as data and applications
 * Local Area Network - Term for a particular network in a geographic location such as an office building, single department w/in a corporate office, home office
