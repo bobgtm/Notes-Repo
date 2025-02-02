@@ -57,9 +57,81 @@ Scaling out instead of scaling up
 
 
 Point to Point::
+Connects two devices, one transmitter the other the receiver over a private line
+
+* Though simple, shows up in many complex networks
+
+* Architecture: 
+** Simple wherein one node communicates with just another
+** Inexpensive
+** Reliable connectivity over the single connection
+** Highly Secure since there is no intermediary connection
+** Little chance of unauthorized access which allows for better security
+
+* Disadvantages: 
+** Link failure means total failure so avoid single connections when can
+** Scaling is difficult and expensive
+** Not suitable for larger areas
 
 
-* Three-tier hierarchical model - 
+Three-tier hierarchical model:: 
+Made up the Access layer (where computers plug into switches) which connects to
+Distribution layer (where layer 3 switches/routers are located) where Access
+connections are aggregated. 
+Core layer allows for the internonnection of different networks. 
+
+* Access Layer - Ethernet connection straight to a switch
+** Front facing where PCs plug in and users can share data
+** Switches and hubs used at this layer
+
+* Distrubition Layer - Policies can be implemented for traffic passing through this
+layer.
+** Used in multiple local networks 
+** Intermediary between core and access layers
+** Ensures local traffic stays w/in networks
+** Routers connect networks
+** IP addresses and routing tables are used
+
+* Core layer - Connections between larger buildings 
+** Connects multiple distribution layer devices
+** Transmits massive amounts of data
+** Fast and Reliable
+
+Collapsed Core Layer (Two-Tier) Architecture::
+Access layer is present where clents connect to switch but the core and distribution
+layers are combined. Meant for networks which are smaller with no distribution layer
+
+* Advantages
+** Suitable for small to medium campuses
+** Simplified networking protocols
+** Lower cost
+
+* Disadvantages
+** Loss of resilience
+** Difficult to manage
+** Limited scalability
+
+Traffic Flows:: 
+
+* East-West Traffic
+** Typically data travelling inside a data center, horizontally in the diagram
+
+** Virtualization Technology
+** Converged Infrastructure
+** Increased processing that used to be performed by hardware. 
+
+* Issues: 
+** High latency impacts performance
+*** Delays may occur between servers
+
+* Key considerations
+** Insider Threats
+
+
+* North-South Traffic
+** Traffic between data center and elsewhere
+*** EX: Client to Internet (Data is travelling through the layers). 
+
 * Network - group or system of interconnected computers that can share resources such as data and applications
 * Local Area Network - Term for a particular network in a geographic location such as an office building, single department w/in a corporate office, home office
 
