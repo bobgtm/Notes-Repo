@@ -284,31 +284,94 @@ Sends data about status, events, and diagnostics to a centralized collection poi
 
 // - 
 
+Structured Query Language (SQL) Server 1433::
+Programming language used to store data in a relational database organized into
+tables
+
+* Includes a parser to make sure commands are sent correctly by the correct person
+* Relational engine, 
+
+// - 
+
+
+Remote Desktop Protocol (RDP) 3389:: 
+Access a remote computer desktop over network or the internet in order to see the
+desktop that is located remotely. 
+
+* Best for Remote management of servers or other clients
+* Useful for home or in branch offices to connect to remote desktops
+
+* Features: 
+** Encryption, Resource Sharing, Smart Card authentication, Bandwidth reduction
+
+* RDP Applications:
+** Remote Desktop Connection - launched on local system to establish connection with
+remote system
+** Remote Assitance - used for troubleshooting/providing help to users with issues
+
 Simple Mail Transfer Protocol Secure (SMTPS) 587::
 
 Lightweight Directory Access Protocol over SSL (LDAPS) 636::
 
 
-• Internet Protocol (IP) types
-- Internet Control Message
+Session Initiation Protocol (SIP) 5060/5061::
+Used for Video, Voice, and Instant Messaging to allow for real-time communications
+
+* Session Attributes
+** User capabilities
+** Session setup and management
+** User availability and location
+
+* A request/response protocol and Messaging protocol
+
+* Requests: 
+** Invitation
+** Bye
+** Update
+** Ack (acknowledgement)
+** Cancel
+
+
+
+== Internet Protocol (IP) types
+When package is sent, receiving side sends an acknowledgement that communications
+hve been established. 
+
+* Internet Control Message
 Protocol (ICMP)
+** Acts as an error message standard which proviced feedback on communications
 - Transmission Control Protocol
 (TCP)
-- User Datagram Protocol (UDP)
-- Generic Routing Encapsulation
-(GRE)
+* User Datagram Protocol (UDP)
+** Common for time-sensitive information
+* Generic Routing Encapsulation (GRE)
 - Internet Protocol Security
 (IPSec)
 o Authentication Header (AH)
+* Responsible for the transmission of identities
 o Encapsulating Security
 Payload (ESP)
 o Internet Key Exchange (IKE)
+
 • Traffic types
-- Unicast
-- Multicast
-- Anycast
-- Broadcast
-Structured Query Language (SQL) Server 1433
-Remote Desktop Protocol (RDP) 3389
-Session Initiation Protocol (SIP) 5060/5061
+- Unicast - directed communication between to end points. There is one sender and
+  one receiver
+* Primary LAN/Internet method and is usually transported over TCP
+- Multicast - one or more points to one or more points; one sender, many receivers;
+  distributed to many clients
+  * Single IP as destination can be set. 
+
+Anycast:: 
+Uses selective routing where incoming transmissions are routed to different
+locations
+
+Broadcast:: 
+Packets sent out from one point to multiple points. Sent to all destinations. 
+
+* Used by most LANS but not always desirable. They're noise because all computers
+receive transmissions. 
+* Not every system needs to process transmissions
+
+
+
 
