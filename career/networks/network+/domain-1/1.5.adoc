@@ -1,33 +1,148 @@
 Compare and contrast transmission media and transceivers.
 and types.
 
-• Wireless
-- 802.11 standards
-- Cellular
-- Satellite
-• Wired
-- 802.3 standards
-- Single-mode vs. multimode fiber
-- Direct attach copper
-(DAC) cable
-o Twinaxial cable
-- Coaxial cable
-- Cable speeds
-- Plenum vs. non-plenum cable
-• Transceivers
-- Protocol
-o Ethernet
-o Fibre Channel (FC)
-- Form factors
-o Small form-factor pluggable
+== Wireless
+* Important to consider speed and range
+** Higher frequency = higher bit transfer 
+*** 2.4 has a great range whereas 5 does not
+
+
+* 802.11 standards
+** Radio based transmission
+*** 2.4 ghz band and 5 ghz
+
+** 802.11a
+*** 54 Mbps at 5GHz
+
+** 802.11b
+*** 11 Mbps @ 2.4 GHz
+
+** 802.11g
+*** 54 Mbps at 2.4GHz
+*** uses multiple antennas at wireless device
+
+** 802.11ac
+*** 433 Mbps to 1.3Gbps over 5GHz
+*** Uses multiple channels to increase throughput to a single station
+
+** Wi-Fi 6 802.11ax)
+*** Theoretical sppeds of 9.6Gbps both 2.4 and 5 Ghz
+
+*** Wi-Fi 6E
+*** Speeds of 9.6 Gbps over 6GHz
+*** hHas a greater range than Wifi
+*** Faster than performance than Wi-Fi6
+
+== Cellular
+Global System for Mobile Communications (GSM):: Changed analog systems into digital telephony system
+* Operates in 900 or 1800Mhz band and digitizes and compresses data before transmission
+
+* Time Division Multiple access (TDMA)
+** Multiple users sharing same data
+** Cellular channels divided into 3 time slots
+** Used by GSM, PDC, DAMPS
+
+* Code Division Multiple Access (CDMA)
+** Used in 2G and 3G wireless comms
+** Form of multiplexing
+** Allows numberous signons on a single transmission channel
+** Commonly uses 800 MHz and 1.9 GHz
+
+* Long Term Evolution (LTE) (4G)
+** Uses Orthogonal Frequency-Division Multiple Access
+
+* 5G
+** Still being developed
+** Gbps speeds
+** Lower latency (near real-time)
+** Perform remote operations
+** Specific device support
+
+* Satellite
+
+== Wired
+* 802.3 standards cover wired ethernet collection of standards at physical layer and
+the data link layer
+
+* Single-mode fiber vs. multimode fiber
+** SM carries a single mode or beam of light down the cable 
+*** Transmitted over longer distances
+
+** MM carries light in different paths
+*** Shorter distances but higher speeds
+
+* Twinaxial cable - Designed for reliable, high-speed data transfer
+** Reduced interference and crosstalk due to the twisting 
+
+
+* Ethernet - standard in wired networking
+** Key considerations are shielding, length, speed, and location
+** Length about 100m from switch to work station 
+** Categories defined by shielding, bandwidth, and maximum data rate
+*** Cat5, Cat5e, Cat6, 7 , 8
+
+* Coaxial cable
+** Inner conductior surrounded by insulation
+** Encased in conductive shielding and outer jacket
+** RG6 and RG11 - common used for cable, telephony, and internet
+
+* Direct Attach Copper Cables 
+** Allows direct comms over copper wire 
+** Uses specific connectors and a fixed cable length
+** Electromagnetically shielded for stable communication
+
+
+* Cable speeds
+* Plenum vs. non-plenum cable
+** Plenum is the space above the office where piping, a/c ducts run. 
+** Plenum calbes are fire-resistance used in scenarious where fire safety is
+required
+** NP aren't fire resistant and may give off toxic fumes when lit. 
+
+== Transceivers
+* Protocol
+*  Fibre Channel (FC) Technology (point to point)
+** Ordered and lossless data transfer - point to point communication 
+** Run on fibre optic or copper cables used inside data center
+
+**  Form factors
+*** Small form-factor pluggable
 (SFP)
-o Quad small form-factor
+*** Quad small form-factor
 pluggable (QSFP)
-• Connector types
-- Subscriber connector (SC)
-- Local connector (LC)
-- Straight tip (ST)
-- Multi-fiber push on (MPO)
-- Registered jack (RJ)11
-- RJ45
-- F-type
+
+Advantages: 
+* remote disaster recoverys
+* Business continuity
+
+Commonly used to link servers, switches, and data centers
+Small form-factor and lower power consumption
+Use Fibre Channel Protocol
+
+
+* Ethernet Transceivers
+** Not connecting to Data storage networks but moreso between switches in a LAN
+
+VS: 
+
+Eth is faster
+FC is more reliable
+FC has better security
+FC mostly used in data centers where you're moving large blocks of data
+Eth used to concentrate connections
+
+FC and Eth must be connected to Matched switches and don't really intermix
+
+== Connector types
+* Subscriber connector (SC)
+** Square connector used at home
+* Local connector (LC)
+** Square connector body which pushes into receiver
+* Straight tip (ST)
+** has round metal connector called bayonet 
+* Multi-fiber push on (MPO)
+* Registered jack (RJ)11 - telephone connection
+* RJ45 (8 pin) - used to connect workstations in a building to the network
+* F-type - Domestic television equipment
+* UPC (Ultra Physical Contact) is rounded in shape 
+* APC (Angled Physical Contact) is angled to eliminate some of the reflective light 
