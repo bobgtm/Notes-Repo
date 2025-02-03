@@ -47,20 +47,56 @@ Receives from network layer and passes it to physical layer. It creates frames a
 
 //-
 
-4. Layer 4 - Transport 
+Layer 4 - Transport::
+Segments and reassembles data into a data stream
+
+Eiteher connection-oriented or connectionless
+
+** Connection-Oriented Communication: 
+*** Sender (source) contacts destination's TCP Process sending a SYN packet
+*** Destination (receiver) responds by sendin a SYN-ACK packet
+*** Source node sends an ACK packet back and a connection is established
+
 * Responsible for end-to-end message delivery - using UDP or TCP 
+
+
 * Error Checking is involved depending on type of connect
-* Message acknowledgement and traffic control
+* Message acknowledgement and traffic flow control
+** A means for reciever to govern amount of data sent by the sender to prevent overflowing the buffers in the receiving host
+*** Segments delivered acknowledged back to sender upon reception
+*** Segments not acknowledged must be retransmitted
+*** Segments sequenced into proper order upon arrival at destination
+*** Data flow maintained to avoid congestion, overloading, and data loss
+
+** A stop, (buff is full), message will be sent so that resources aren't dumped and data lost. 
+** A resume or ready indicator will be sent for transmission to be resumed by the sender. 
+
+
 * Session multiplexing
 * Service Point adressing
 
 //-
 
-Layer 5 - Session 
-Layer 6 - Presentation - aka the translation layer as it presents data in a uniform format
+Layer 5 - Session::
+Responsible for setting up, managing, and then tearing down sessiosn b/w Presentation layer entities
+
+* Coordinates communication b/w systems and serves to organize their communication via three modes:
+** Simplex - one direction
+** Half-duplex - both directions but one direction at a time
+** Full-duplex - both directions at a time
+
+Layer 6 - Presentation::
+Responsible for data translation and code formatting. Adapts data into a standard format before transmission. 
+
+* Data compression, decompression, encryption, and decryption are associated with this, the "translation" layer
+
+
 * Character code translation
     ** ASCII & EBCDIC
 
 //- 
 
-Layer 7 - Application
+Layer 7 - Application::
+Responsible for identifying and establishing the availalbility of the intendend communication partner and determining whether sufficient resources for the requested communications exist. 
+
+* Where users communicate with the computer/network stack through application processes, interfaces, APIs which connect to the OS. 

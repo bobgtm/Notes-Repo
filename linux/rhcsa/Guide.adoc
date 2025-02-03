@@ -1,0 +1,159 @@
+= Exam Objectives via RedHat
+
+_Where possible, chapters from prep books are provided in square brackets_
+
+[bibliography]
+== Sources
+* [[[SVV]]] Sander van Vugt. Red Hat RHCSA™ 9 Cert Guide EX200. Pearson Education, Inc. 2023
+
+== Understand and use essential tools
+
+* Access a shell prompt and issue commands with correct syntax <<SVV>> - Ch. 2
+* Locate, read, and use system documentation including man, info, and files in /usr/share/doc - <<SVV>> - Ch. 2
+* Use input-output redirection (>, >>, |, 2>, etc.) <<SVV>> - Ch. 2
+* Create, delete, copy, and move files and directories <<SVV>> - Ch. 3
+* Create hard and soft links <<SVV>> - Ch. 3
+* Archive, compress, unpack, and uncompress files using tar, gzip, and bzip2 - <<SVV>> - Ch. 3
+* Use grep and regular expressions to analyze text <<SVV>> - Ch. 4
+* Create and edit text files - <<SVV>> - Ch. 4
+* Access remote systems using SSH - <<SVV>> - Ch. 5
+* Log in and switch users in multiuser targets - <<SVV>> - Ch. 5
+* List, set, and change standard ugo/rwx permissions <<SVV>> - Ch. 7
+
+=== Key Terms
+
+==== Ch. 2
+shell:: 
+
+Bash::
+
+Internal Command::
+Command that is a part of the shell itself and doesn't have to be laded from disk (aka a built in?)
+
+External Command::
+Exists as an executable file on the disk of the computer
+
+* somewhat slower because it has to be rad from disk first time its used
+
+$PATH::
+
+STDIN::
+
+STDOUT::
+
+STDERR::
+
+Redirection::
+
+File Descriptor::
+
+Device File:: 
+A file that is used to access specific hardware
+
+* EX: ``/dev/sda`` as the hard disk
+
+Pipe::
+Used to catch the output of one command and use that input for a second command
+
+Environment::
+Consists of variables that define the environment of a user when working from a shell
+
+* Config Heirarchy 
+** ``/etc/profile`` Generic file processed by all users upon login
+** ``/etc/bashrc`` File processed when subshells are started
+** ``~/.bash_profile`` User-specific login shell variables defined
+** ``~/.bashrc`` Subshell variables can be defined
+
+Variable::
+Fixed names in the shell environment that can be assigned dynamic values
+
+Login Shell::
+The first shell that is opened for a user after the user has logged in
+
+Subshell::
+Started after a user run scripts
+
+// - 
+
+== Create simple shell scripts
+
+* Conditionally execute code (use of: if, test, [], etc.) - <<SVV>> - Ch. 19
+* Use Looping constructs (for, etc.) to process file, command line input - <<SVV>> - Ch. 19
+* Process script inputs ($1, $2, etc.) - <<SVV>> - Ch. 19
+* Processing output of shell commands within a script - <<SVV>> - Ch. 19
+
+== Operate running systems
+
+* Boot, reboot, and shut down a system normally - <<SVV>> - Ch. 5
+* Securely transfer files between systems  - <<SVV>> - Ch. 5
+* Start, stop, and check the status of network services - <<SVV>> - Ch. 8
+* Identify CPU/memory intensive processes and kill processes - <<SVV>> - Ch. 10
+* Adjust process scheduling - <<SVV>> - Ch. 10
+* Manage tuning profiles - <<SVV>> - Ch. 10
+* Locate and interpret system log files and journals - <<SVV>> - Ch. 13
+* Preserve system journals - <<SVV>> - Ch. 13
+* Boot systems into different targets manually - <<SVV>> - Ch. 18
+* Interrupt the boot process in order to gain access to a system - <<SVV>> - Ch. 18
+
+== Configure local storage
+
+* List, create, delete partitions on MBR and GPT disks
+* Create and remove physical volumes
+* Assign physical volumes to volume groups
+* Create and delete logical volumes
+* Configure systems to mount file systems at boot by universally unique ID (UUID) or label
+* Add new partitions and logical volumes, and swap to a system non-destructively
+
+== Create and configure file systems
+
+* Create, mount, unmount, and use vfat, ext4, and xfs file systems
+* Mount and unmount network file systems using NFS
+* Configure autofs
+* Extend existing logical volumes
+* Create and configure set-GID directories for collaboration
+* Diagnose and correct file permission problems
+
+== Deploy, configure, and maintain systems
+
+* Schedule tasks using at and cron
+* Start and stop services and configure services to start automatically at boot
+* Configure systems to boot into a specific target automatically
+* Configure time service clients
+* Install and update software packages from Red Hat Network, a remote repository, or from the local file system
+* Modify the system bootloader
+
+== Manage basic networking
+
+* Configure IPv4 and IPv6 addresses
+* Configure hostname resolution
+* Configure network services to start automatically at boot
+* Restrict network access using firewall-cmd/firewall [<<SVV>> Ch. 2]
+
+== Manage users and groups
+
+* Create, delete, and modify local user accounts
+* Change passwords and adjust password aging for local user accounts
+* Create, delete, and modify local groups and group memberships
+* Configure superuser access
+
+== Manage security
+
+* Configure firewall settings using firewall-cmd/firewalld
+* Manage default file permissions
+* Configure key-based authentication for SSH
+* Set enforcing and permissive modes for SELinux
+* List and identify SELinux file and process context
+* Restore default file contexts
+* Manage SELinux port labels
+* Use boolean settings to modify system SELinux settings
+* Diagnose and address routine SELinux policy violations
+
+== Manage containers
+
+* Find and retrieve container images from a remote registry
+* Inspect container images
+* Perform container management using commands such as podman and skopeo
+* Perform basic container management such as running, starting, stopping, and listing running containers
+* Run a service inside a container
+* Configure a container to start automatically as a systemd service
+* Attach persistent storage to a container
