@@ -3,7 +3,7 @@
 _Where possible, chapters from prep books are provided in square brackets_
 
 [bibliography]
-=== Sources
+== Sources
 * [[[SVV]]] Sander van Vugt. Red Hat RHCSA™ 9 Cert Guide EX200. Pearson Education, Inc. 2023
 
 == Understand and use essential tools
@@ -20,6 +20,60 @@ _Where possible, chapters from prep books are provided in square brackets_
 * Log in and switch users in multiuser targets - <<SVV>> - Ch. 5
 * List, set, and change standard ugo/rwx permissions <<SVV>> - Ch. 7
 
+=== Key Terms
+
+==== Ch. 2
+shell:: 
+
+Bash::
+
+Internal Command::
+Command that is a part of the shell itself and doesn't have to be laded from disk (aka a built in?)
+
+External Command::
+Exists as an executable file on the disk of the computer
+
+* somewhat slower because it has to be rad from disk first time its used
+
+$PATH::
+
+STDIN::
+
+STDOUT::
+
+STDERR::
+
+Redirection::
+
+File Descriptor::
+
+Device File:: 
+A file that is used to access specific hardware
+
+* EX: ``/dev/sda`` as the hard disk
+
+Pipe::
+Used to catch the output of one command and use that input for a second command
+
+Environment::
+Consists of variables that define the environment of a user when working from a shell
+
+* Config Heirarchy 
+** ``/etc/profile`` Generic file processed by all users upon login
+** ``/etc/bashrc`` File processed when subshells are started
+** ``~/.bash_profile`` User-specific login shell variables defined
+** ``~/.bashrc`` Subshell variables can be defined
+
+Variable::
+Fixed names in the shell environment that can be assigned dynamic values
+
+Login Shell::
+The first shell that is opened for a user after the user has logged in
+
+Subshell::
+Started after a user run scripts
+
+// - 
 
 == Create simple shell scripts
 
