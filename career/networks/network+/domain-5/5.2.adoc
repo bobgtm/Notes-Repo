@@ -1,0 +1,34 @@
+= 5.2 Given a scenario, troubleshoot common cabling and physical interface issues.
+
+• Cable issues
+- Incorrect cable
+o Single mode vs. multimode
+o Category 5/6/7/8
+o Shielded twisted pair (STP)
+vs. unshielded twisted pair
+(UTP)
+- Signal degradation
+o Crosstalk
+o Interference
+o Attenuation
+- Improper termination
+- Transmitter (TX)/Receiver (RX)
+transposed
+• Interface issues
+- Increasing interface counters
+o Cyclic redundancy check
+(CRC)
+o Runts
+o Giants
+o Drops
+- Port status
+o Error disabled
+o Administratively down
+o Suspended
+• Hardware issues
+- Power over Ethernet (PoE)
+o Power budget exceeded
+o Incorrect standard
+- Transceivers
+o Mismatch
+o Signal strength

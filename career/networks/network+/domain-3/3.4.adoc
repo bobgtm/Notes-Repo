@@ -1,0 +1,38 @@
+= Given a scenario, implement IPv4 and IPv6 network services.
+
+• Dynamic addressing
+- DHCP
+o Reservations
+o Scope
+o Lease time
+o Options
+o Relay/IP helper
+o Exclusions
+- Stateless address
+autoconfiguration (SLAAC)
+• Name resolution
+- DNS
+o Domain Name Security
+Extensions (DNSSEC)
+o DNS over HTTPS (DoH)
+and DNS over TLS (DoT)
+o Record types
+o Address (A)
+o AAAA
+o Canonical name (CNAME)
+o Mail exchange (MX)
+o Text (TXT)
+o Nameserver (NS)
+o Pointer (PTR)
+o Zone types
+o Forward
+o Reverse
+o Authoritative vs.
+non-authoritative
+o Primary vs. secondary
+o Recursive
+- Hosts file
+• Time protocols
+- NTP
+- Precision Time Protocol (PTP)
+- Network Time Security (NTS)

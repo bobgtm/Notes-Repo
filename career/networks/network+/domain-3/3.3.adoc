@@ -1,0 +1,18 @@
+= Explain disaster recovery (DR) concept
+
+• DR metrics
+- Recovery point objective (RPO)
+- Recovery time objective (RTO)
+- Mean time to repair (MTTR)
+- Mean time between failures
+(MTBF)
+• DR sites
+- Cold site
+- Warm site
+- Hot site
+• High-availability approaches
+- Active-active
+- Active-passive
+• Testing
+- Tabletop exercises
+- Validation tests

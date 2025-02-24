@@ -1,0 +1,16 @@
+= 5.4 Given a scenario, troubleshoot common performance issues.
+
+• Congestion/contention
+• Bottlenecking
+• Bandwidth
+- Throughput capacity
+• Latency
+• Packet loss
+• Jitter
+• Wireless
+- Interference
+o Channel overlap
+- Signal degradation or loss
+- Insufficient wireless coverage
+- Client disassociation issues
+- Roaming misconfiguration

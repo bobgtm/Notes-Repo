@@ -1,0 +1,33 @@
+= Explain the purpose of organizational processes and procedures.
+
+• Documentation
+- Physical vs. logical diagrams
+- Rack diagrams
+- Cable maps and diagrams
+- Network diagrams
+o Layer 1
+o Layer 2
+o Layer 3
+- Asset inventory
+o Hardware
+o Software
+o Licensing
+o Warranty support
+- IP address management (IPAM)
+- Service-level agreement (SLA)
+- Wireless survey/heat map
+• Life-cycle management
+- End-of-life (EOL)
+- End-of-support (EOS)
+- Software management
+o Patches and bug fixes
+o Operating system (OS)
+o Firmware
+- Decommissioning
+• Change management
+- Request process tracking/
+service request
+• Configuration management
+- Production configuration
+- Backup configuration
+- Baseline/golden configuration

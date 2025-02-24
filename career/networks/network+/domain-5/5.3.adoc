@@ -1,0 +1,18 @@
+= 5.3 Given a scenario, troubleshoot common issues with network services.
+
+• Switching issues
+- STP
+o Network loops
+o Root bridge selection
+o Port roles
+o Port states
+- Incorrect VLAN assignment
+- ACLs
+• Route selection
+- Routing table
+- Default routes
+• Address pool exhaustion
+• Incorrect default gateway
+• Incorrect IP address
+- Duplicate IP address
+• Incorrect subnet mask

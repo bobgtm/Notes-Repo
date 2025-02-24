@@ -1,0 +1,14 @@
+= Compare and contrast network access and management methods
+
+• Site-to-site VPN
+• Client-to-site VPN
+- Clientless
+- Split tunnel vs. full tunnel
+• Connection methods
+- SSH
+- Graphical user interface (GUI)
+- API
+- Console
+• Jump box/host
+• In-band vs. out-of-band
+managemen

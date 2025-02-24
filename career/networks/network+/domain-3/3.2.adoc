@@ -1,0 +1,31 @@
+= Given a scenario, use network monitoring technologies.
+
+• Methods
+- SNMP
+o Traps
+o Management information base
+(MIB)
+o Versions
+o v2c
+o v3
+o Community strings
+o Authentication
+- Flow data
+- Packet capture
+- Baseline metrics
+o Anomaly alerting/notification
+- Log aggregation
+o Syslog collector
+o Security information and
+event management (SIEM)
+- Application programming
+interface (API) integration
+- Port mirroring
+• Solutions
+- Network discovery
+o Ad hoc
+o Scheduled
+- Traffic analysis
+- Performance monitoring
+- Availability monitoring
+- Configuration monitoring

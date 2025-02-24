@@ -1,0 +1,24 @@
+= 4.2 Summarize various types of attacks and their impact to the network.
+
+• Denial-of-service (DoS)/
+distributed denial-of-service
+(DDoS)
+• VLAN hopping
+• Media Access Control (MAC)
+flooding
+• Address Resolution Protocol
+(ARP) poisoning
+• ARP spoofing
+• DNS poisoning
+• DNS spoofing
+• Rogue devices and services
+- DHCP
+- AP
+• Evil twin
+• On-path attack
+• Social engineering
+- Phishing
+- Dumpster diving
+- Shoulder surfing
+- Tailgating
+• Malware

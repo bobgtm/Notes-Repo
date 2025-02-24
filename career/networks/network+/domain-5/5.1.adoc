@@ -1,0 +1,37 @@
+= 5.1 Explain the troubleshooting methodology.
+
+• Identify the problem
+- Gather information
+- Question users
+- Identify symptoms
+- Determine if anything has
+changed
+- Duplicate the problem, if
+possible
+- Approach multiple problems
+individually
+• Establish a theory of probable
+cause
+- Question the obvious
+- Consider multiple approaches
+o Top-to-bottom/bottom-to-top
+OSI model
+o Divide and conquer
+• Test the theory to determine the
+cause
+- If theory is confirmed, determine
+next steps to resolve problem
+- If theory is not confirmed,
+establish a new theory or
+escalate
+• Establish a plan of action to
+resolve the problem and identify
+potential effects
+• Implement the solution or escalate
+as necessary
+• Verify full system functionality and
+implement preventive measures if
+applicable
+• Document findings, actions,
+outcomes, and lessons learned
+throughout the process

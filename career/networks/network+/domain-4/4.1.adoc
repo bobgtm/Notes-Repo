@@ -1,0 +1,59 @@
+= 4.1 Explain the importance of basic network security concepts.
+
+• Logical security
+- Encryption
+o Data in transit
+o Data at rest
+- Certificates
+o Public key infrastructure (PKI)
+o Self-signed
+- Identity and access management
+(IAM)
+o Authentication
+o Multifactor authentication
+(MFA)
+o Single sign-on (SSO)
+o Remote Authentication
+Dial-in User Service
+(RADIUS)
+o LDAP
+o Security Assertion Markup
+Language (SAML)
+o Terminal Access Controller
+Access Control System Plus
+(TACACS+)
+o Time-based authentication
+o Authorization
+o Least privilege
+o Role-based access control
+- Geofencing
+• Physical security
+- Camera
+- Locks
+• Deception technologies
+- Honeypot
+- Honeynet
+• Common security terminology
+- Risk
+- Vulnerability
+- Exploit
+- Threat
+- Confidentiality, Integrity, and
+Availability (CIA) triad
+• Audits and regulatory compliance
+- Data locality
+- Payment Card Industry Data
+Security Standards (PCI DSS)
+- General Data Protection
+Regulation (GDPR)
+• Network segmentation
+enforcement
+- Internet of Things (IoT) and
+Industrial Internet of Things
+(IIoT)
+- Supervisory control and data
+acquisition (SCADA), industrial
+control System (ICS), operational
+technology (OT)
+- Guest
+- Bring your own device (BYOD)
