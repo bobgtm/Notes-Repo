@@ -1,0 +1,33 @@
+= 5.5 Given a scenario, use the appropriate tool or protocol to solve networking issues.
+
+• Software tools
+- Protocol analyzer
+- Command line
+o ping
+o traceroute/tracert
+o nslookup
+o tcpdump
+o dig
+o netstat
+o ip/ifconfig/ipconfig
+o arp
+- Nmap
+- Link Layer Discovery Protocol
+(LLDP)/Cisco Discovery Protocol
+(CDP)
+- Speed tester
+• Hardware tools
+- Toner
+- Cable tester
+- Taps
+- Wi-Fi analyzer
+- Visual fault locator
+• Basic networking device
+commands
+- show mac-address-table
+- show route
+- show interface
+- show config
+- show arp
+- show vlan
+- show power
