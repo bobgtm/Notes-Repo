@@ -1,0 +1,19 @@
+= Explain characteristics of routing technologies
+
+• Static routing
+• Dynamic routing
+- Border Gateway Protocol (BGP)
+- Enhanced Interior Gateway
+Routing Protocol (EIGRP)
+- Open Shortest Path First (OSPF)
+• Route selection
+- Administrative distance
+- Prefix length
+- Metric
+• Address translation
+- NAT
+- Port address translation (PAT)
+• First Hop Redundancy Protocol
+(FHRP)
+• Virtual IP (VIP)
+• Subinterfaces

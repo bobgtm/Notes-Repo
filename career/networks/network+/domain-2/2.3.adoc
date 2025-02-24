@@ -1,0 +1,35 @@
+= Given a scenario, select and configure wireless devices and technologies.
+
+• Channels
+- Channel width
+- Non-overlapping channels
+- Regulatory impacts
+o 802.11h
+• Frequency options
+- 2.4GHz
+- 5GHz
+- 6GHz
+- Band steering
+• Service set identifier (SSID)
+- Basic service set identifier
+(BSSID)
+- Extended service set identifier
+(ESSID)
+• Network types
+- Mesh networks
+- Ad hoc
+- Point to point
+- Infrastructure
+• Encryption
+- Wi-Fi Protected Access 2
+(WPA2)
+- WPA3
+• Guest networks
+- Captive portals
+• Authentication
+- Pre-shared key (PSK) vs.
+Enterprise
+• Antennas
+- Omnidirectional vs. directional
+• Autonomous vs. lightweight
+access point

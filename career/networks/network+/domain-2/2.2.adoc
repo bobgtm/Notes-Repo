@@ -1,0 +1,16 @@
+= Given a scenario, configure switching technologies and features.
+
+• Virtual Local Area Network
+(VLAN)
+- VLAN database
+- Switch Virtual Interface (SVI)
+• Interface configuration
+- Native VLAN
+- Voice VLAN
+- 802.1Q tagging
+- Link aggregation
+- Speed
+- Duplex
+• Spanning tree
+• Maximum transmission unit (MTU)
+- Jumbo frames

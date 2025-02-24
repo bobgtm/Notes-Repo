@@ -1,0 +1,23 @@
+= Explain important factors of physical installations.
+
+• Important installation implications
+- Locations
+o Intermediate distribution
+frame (IDF)
+o Main distribution frame (MDF)
+- Rack size
+- Port-side exhaust/intake
+- Cabling
+o Patch panel
+o Fiber distribution panel
+- Lockable
+• Power
+- Uninterruptible power supply
+(UPS)
+- Power distribution unit (PDU)
+- Power load
+- Voltage
+• Environmental factors
+- Humidity
+- Fire suppression
+- Temperature
