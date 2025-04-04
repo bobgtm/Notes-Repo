@@ -11,4 +11,10 @@
     1. uname -r
     2. uname -a
 
-2. Modules - 
+2. Kernel Args: 
+3. OS Version: 
+4. Modules: 
+	- modprob
+	- modinfo
+5. Mount Points: 
+6. Text Editor:
