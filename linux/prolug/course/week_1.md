@@ -8,13 +8,15 @@
 - Networking
 - Filesystems
 - Devices
-    1. uname -r
+    1. uname -r displays the Kernel Version
     2. uname -a
 
 2. Kernel Args: 
 3. OS Version: 
+	- uname -o
 4. Modules: 
-	- modprob
+	- modprobe
 	- modinfo
 5. Mount Points: 
+	- lsblk
 6. Text Editor:
