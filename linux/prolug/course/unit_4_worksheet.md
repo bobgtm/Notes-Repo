@@ -38,7 +38,22 @@ Useful tools:
 - overleaf.com
 - draw.io
 
-## Discussion Questions
+## Discussion Posts
+
+Discussion Post #1
+
+Read this article: https://cio-wiki.org/wiki/Operations_Bridge
+
+What terms and concepts are new to you?
+- Event Correlation; Operations Bridge; Service Provisioning; 
+
+Which pro seems the most important to you? Why?
+- That an Operatons Bridge provides centralized management and streamlined operations seems the most important to me. Being able to consolidate infra management into a single location reigns in the sprawl of multi-service and infra management. Having to touch each service or piece of infrastructure across multiple platforms is time consuming and could lead to oversight if documentation and tracking is not put in place properly. 
+
+Which con seems the most costly, or difficult to overcome to you? Why?
+
+
+## Digging Deeper
 
 1. Read about battle drills here (https://en.wikipedia.org/wiki/Battle_drill)
 Why might it be important to practice incident handling before an incident occurs?
