@@ -9,8 +9,16 @@ Fill out this sheet as you progress through the lab and discussions. Hold onto a
 Discussion Questions:
 Unit 5 Discussion Post 1: Review the page: https://attack.mitre.org/
 1. What terms and concepts are new to you?
+* Resource Development - techniques which involve adversaries creating, purchasing, or compromising/stealing resources that can be used to support targeting
+* Hardware Additions
+* Drive-by Target - operational environment that infect systems which visit a website while browsing. Browser targeted for exploitation.
+* Business Relationships - Info about business relationships exposed via phishing, social media, websites, domains, connected network access. 
+
 2. Why, as a system administrator and not directly in security, do you think it’s so important to understand how your systems can be attacked? Isn’t it someone else’s problem to think about that?
+- Simply put, it is important to understand how attacks can happen to hold both yourself and your organization accountable for the decisions made about the systems deployed and maintained for the compnay. Gives one the opportunity to both prevent and mitigate any security vulnerabilities. While it might be someone else's *sole* problem to think about in their official professional role, to assume that it is not an admin's problem is incredibly risky. To fail to think about security as an admin is to put a company's systems in jeopardy. 
+
 3. What impact to the organization is data exfiltration? Even if you’re not a data owner or data custodian, why is it so important to understand the data on your systems?
+- Data exfiltration can impact an organization in a number of ways. 
 
 Unit 5 Discussion Post 2: Find a blog or article on the web that discusses the user environment in Linux. You may want to search for .bashrc or (dot) environment files in Linux.
 1. What types of customizations might you setup for your environment? Why?
