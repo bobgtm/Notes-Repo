@@ -68,14 +68,30 @@ services to the company's clients.
 
 2. Your team has no documentation around how to check out a server during an incident. Write out a procedure of what you think an operations person should be doing on the system they suspect is not working properly. This may help, to get you started (https://zeltser.com/media/docs/security-incident-survey-cheat-sheet.pdf?msc=Cheat+Sheet+Blog) You may use AI for this, but let us know if you do.
 
-1. Make note of the uptime
-  1. Uptime or w
-
-2. lastlog or last
-3. arp -an 
-3. Check system environment
-    - cat /etc/\*release
-
+* Check the Kernel name and version
+  * `uname -a`
+* Make Note of Uptime
+  * `uptime`
+* Check Files Recently Changed
+  * `ls -lat /`
+  * `ps aux`
+* Check running system services for any abnormalities
+  * `sudo systemctl status`
+* Check Logs
+  * `sudo dmesg | grep -i error`
+  * `sudo grep -iE 'error|warn|fail|critical' /var/log/syslog | tail -n 50`
+* Check Recent Events
+  * `last`
+* List Processes
+  * `ps aux`
+* Check Resource Use
+  * `iostat -xz 1 5`
+  * `df -h`
+* Check Connectivity
+  * `ping`
+  * `ip route show`
+ 
+  
 ## Digging Deeper
 
 1. Read about battle drills here (https://en.wikipedia.org/wiki/Battle_drill)
