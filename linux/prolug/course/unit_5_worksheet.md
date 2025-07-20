@@ -3,9 +3,6 @@
 ProLUG 101
 Unit 5 Worksheet
 
-Instructions
-Fill out this sheet as you progress through the lab and discussions. Hold onto all of your work to send to me at the end of the course.
-
 Discussion Questions:
 Unit 5 Discussion Post 1: Review the page: https://attack.mitre.org/
 1. What terms and concepts are new to you?
@@ -18,11 +15,12 @@ Unit 5 Discussion Post 1: Review the page: https://attack.mitre.org/
 - Simply put, it is important to understand how attacks can happen to hold both yourself and your organization accountable for the decisions made about the systems deployed and maintained for the compnay. Gives one the opportunity to both prevent and mitigate any security vulnerabilities. While it might be someone else's *sole* problem to think about in their official professional role, to assume that it is not an admin's problem is incredibly risky. To fail to think about security as an admin is to put a company's systems in jeopardy. 
 
 3. What impact to the organization is data exfiltration? Even if you’re not a data owner or data custodian, why is it so important to understand the data on your systems?
-- Data exfiltration can impact an organization in a number of ways. 
+- Data is being produced or consumed on systems. Understanding the data on the system allows us to better understand how to troubleshoot the system given any anomolies in data, what security meausures to implement to protect the data, allows you to understand how services should connect, and gives insight into what system baselines should be established to be handle that data. The exfiltration of that data can jeopardize the company's reputation and business. It may impact other parts of the company's systems should data flow and exchange become impacted. 
 
 Unit 5 Discussion Post 2: Find a blog or article on the web that discusses the user environment in Linux. You may want to search for .bashrc or (dot) environment files in Linux.
 1. What types of customizations might you setup for your environment? Why?
 2. What problems can you anticipate around helping users with their dot files?
+   
 Definitions/Terminology
 Footprinting
 Scanning
@@ -44,8 +42,6 @@ System open ports and services
 System type if it can be determined.
 
 
-
-
 Links:
 
 Terms:
@@ -58,25 +54,9 @@ Unit 5 Manage Users and Groups - To be completed outside of lecture time
 1. Map the network from one of the rocky nodes.
 Using a template that you build or find from the internet, provide a 1 page summary of what you find in the network.
 
-Begin working on your project from the Project Guide
-		Topics:
-1.	System Stability
-2.	System Performance
-3.	System Security
-4.	System monitoring
-5.	Kubernetes
-6.	Programming/Automation
 
-You will research, design, deploy, and document a system that improves your administration of Linux systems in some way.
-Digging Deeper
+
 1.	Read
 
 Reflection Questions
 1.	What questions do you still have about this week?
-
-
-2.
-
-
-
-
