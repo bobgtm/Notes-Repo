@@ -6,4 +6,6 @@ We will need a web server, a database, and userspice.
 
 ### Ubuntu
 
+```sudo apt install apache2```
 
+Test installation by typing in the IP address of the server. 
