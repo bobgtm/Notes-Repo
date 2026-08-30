@@ -1,27 +1,7 @@
 #!/bin/bash
 
-myvar="Hello!"
 
-echo "the value of the myvar variable is: $myvar"
+printf "%(%Y-%m-%d %H:%M:%S)T\n"
 
-myvar="Bonjour!"
+date +%s
 
-echo "the value of the myvar variable is: $myvar"
-
-declare -r myname="Scott"
-
-echo "The myname value is $myname"
-myname="Michael"
-echo "the Value of the myname variable is: $myname"
-
-declare -l lowerstring="This is soem TESXT"
-lowerstring="Let's CHange the Value!"
-echo "the Value of the lowerstirng varialbel is: $lowerstring"
-lowerstring="Let's CHange the Value!"
-echo "the Value of the lowerstirng varialbel is: $lowerstring"
-
-declare -u upperstring="This is soem TESXT"
-upperstring="Let's CHange the Value!"
-echo "the Value of the lowerstirng varialbel is: $upperstring"
-upperstring="Let's CHange the Value!"
-echo "the Value of the lowerstirng varialbel is: $upperstring" 
