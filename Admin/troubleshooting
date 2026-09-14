@@ -1,0 +1,17 @@
+# Troubleshooting Notes 
+
+Taken from het_tanis youtube talk
+
+## Theory
+Most Troubleshooting follows this pattern: 
+
+1. Identify the problem and its systems
+- Often this is to establish a problem statement
+-- Could be systemic, acute, or chronic
+
+2. Establish a theory of probable cause
+3. Test your theory to determine the cause
+4. establish a plan for resolving the problem
+5. Implement the solution or escalate the problem
+6. Verify functionality and implement preventative measures
+7. Document findings, actions, and outcomes.
