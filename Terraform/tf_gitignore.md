@@ -7,9 +7,8 @@
 -- These contain secrets and other sensitive information
 
 - ```.terraform.tfstate.lock.info```
--- File is created and deleted automatically by TF when running ```terraform apply```
-
-- Contains info about state lock
+-- File is created and deleted automatically by TF when running ```terraform
+apply```: Contains info about state lock
 
 - ```.terraform directory```: where TF downloads providers and child modules
 
