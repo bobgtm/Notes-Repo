@@ -9,3 +9,4 @@ Use your favorite text editor to open the file called .git/info/exclude within t
 * Navigate to the location of your Git repository.
 * Using your favorite text editor, open the file .git/info/exclude.
 
+For more on .gitignore see [https://git-scm.com/docs/gitignore](https://git-scm.com/docs/gitignore)
